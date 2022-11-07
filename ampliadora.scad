@@ -1,8 +1,8 @@
 // It is licensed under the Creative Commons - GNU GPL license.
 // © 2022 by Ricardo Espinosa
 
-xCaja=97;
-yCaja=89.7;
+xCaja=93;
+yCaja=85;// v1=89.7;
 zCaja=13;
 xPest=xCaja+10;
 yPest=yCaja+8;
@@ -21,6 +21,9 @@ cube([xPasante,yPasante, zPasante]);
 
 translate([espesor,espesor,espesor])
 cube([75.75,yCaja-espesor*2,zCaja ]);
+   
+    translate([80,yCaja/2,12.5])
+    sphere(10);
 
 }
 CubePoints2 = [
@@ -32,7 +35,7 @@ CubePoints2 = [
   [ xPest,  0,  zPest ],  //5
   [ xPest,  yPest,  zPest ],  //6
   [ xCaja,  yPest,  zPest ]]; //7
-  
+ 
 CubeFaces2 = [
   [0,1,2,3],  // bottom
   [4,5,1,0],  // front
